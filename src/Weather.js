@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
@@ -12,11 +13,14 @@ export default function Weather() {
       city: response.data.name,
       country: response.data.sys.country,
       temperature: response.data.main.temp,
+      feelsLike: response.data.main.feels_like,
+      temperatureHigh: response.data.main.temp_max,
+      temperatureLow: response.data.main.temp_min,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: response.data.wind.speed,
-      date: "Monday, February 99, 99:99 AM",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -36,13 +40,15 @@ export default function Weather() {
         </form>
         <header className="Header">
           <h1>
-            {weatherData.city}, {weatherData.country};
+            {weatherData.city}, {weatherData.country}
           </h1>
-          <h2>{weatherData.date}</h2>
+          <h2>
+            <FormattedDate date={weatherData.date} />
+          </h2>
           <p className="TempInfo">
             <img src={weatherData.icon} alt={weatherData.description} />
             <span className="Temperature">
-              Math.round({weatherData.temperature})
+              {Math.round(weatherData.temperature)}
             </span>
             <span className="TempUnits">
               <a href="/">˚C</a> |<a href="/">˚F</a>
@@ -55,16 +61,17 @@ export default function Weather() {
               <strong>{weatherData.description}</strong>
             </li>
             <li>
-              Feels like <strong>-99˚</strong>
+              Feels like <strong>{Math.round(weatherData.feelsLike)}˚</strong>
             </li>
             <li>
-              Hi-Lo <strong>99˚</strong>| -99˚
+              Hi-Lo <strong> {Math.round(weatherData.temperatureHigh)}˚</strong>
+              | {Math.round(weatherData.temperatureLow)}˚
             </li>
             <li>
               Humidity <strong>{weatherData.humidity}%</strong>
             </li>
             <li>
-              Wind Speed <strong>{weatherData.wind} km/h</strong>
+              Wind Speed <strong>{Math.round(weatherData.wind)}</strong> km/h
             </li>
           </ul>
         </section>
@@ -123,9 +130,8 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "4cea025489823b86da62835c695c95d3";
-    let city = "Bemidji";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=${apiKey}`;
     console.log(apiUrl);
 
     axios.get(apiUrl).then(handleResponse);
