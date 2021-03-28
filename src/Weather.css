@@ -1,0 +1,92 @@
+.SearchEngine input {
+  font-weight: 200;
+  font-size: 17px;
+  margin: 2px;
+}
+
+.Header {
+  padding-top: 10px;
+  font-weight: 200;
+  color: #2f2f30;
+}
+
+.Header h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+.Header h2 {
+  font-weight: 200;
+  font-size: 23px;
+  margin: 0;
+}
+
+.TempInfo img {
+  position: relative;
+  bottom: 25px;
+}
+
+.Header .Temperature {
+  font-size: 70px;
+}
+
+.Header .TempUnits {
+  font-size: 20px;
+  position: relative;
+  bottom: 37px;
+  margin: 0;
+}
+
+.Header a {
+  color: black;
+  text-decoration: none;
+}
+
+.Header a:hover {
+  color: blue;
+}
+
+.Header a:visited {
+  text-decoration: underline;
+}
+
+.Header p {
+  margin: 0;
+}
+
+.SubHeading {
+  font-weight: 200;
+}
+
+.SubHeading ul {
+  list-style: none;
+}
+.SubHeading li {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+.SubHeading strong {
+  font-weight: 400;
+}
+
+.ForecastWeek {
+  font-weight: 200;
+}
+
+.ForecastWeek ul {
+  list-style: none;
+}
+
+.ForecastWeek li {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.ForecastWeek img {
+  display: inline-block;
+  width: 60px;
+}
