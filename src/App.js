@@ -11,7 +11,7 @@ function App() {
       <Card className="Wrapper">
         <Card.Body>
           <div className="container">
-            <Weather defaultCity="Bemidji" />
+            <Weather defaultCity="Rio de Janeiro" />
           </div>
         </Card.Body>
       </Card>
