@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 function Header(props) {
   return (
@@ -11,7 +12,7 @@ function Header(props) {
         <FormattedDate date={props.data.date} />
       </h2>
       <p className="TempInfo">
-        <img src={props.data.icon} alt={props.data.description} />
+        <WeatherIcon code={props.data.icon} alt={props.data.description} />
         <span className="Temperature">
           {Math.round(props.data.temperature)}
         </span>
