@@ -16,7 +16,6 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
   function handleResponse(response) {
-    console.log(response.data.coord.lon);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -30,8 +29,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
-      latitude: response.data.coord.lat,
-      longitude: response.data.coord.lon,
+      coordinates: response.data.coord
     });
   }
 
@@ -64,7 +62,7 @@ export default function Weather(props) {
         </form>
         <Header data={weatherData} />
         <Subheading data={weatherData} />
-        <ForecastWeek data={weatherData} />
+        <ForecastWeek coords={weatherData.coordinates} />
       </div>
     );
   } else {

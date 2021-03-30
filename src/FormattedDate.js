@@ -9,12 +9,6 @@ function FormattedDate(props) {
       "Thursday",
       "Friday",
       "Saturday",
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
     ];
 
     let monthName = [
