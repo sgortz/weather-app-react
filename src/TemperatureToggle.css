@@ -1,0 +1,27 @@
+.TemperatureToggle {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.TemperatureToggle .TempUnits {
+  font-size: 20px;
+  position: relative;
+  bottom: 37px;
+  margin: 0;
+}
+.TemperatureToggle .Temperature {
+  font-size: 70px;
+}
+
+.TemperatureToggle a {
+  color: black;
+  text-decoration: none;
+}
+
+.TemperatureToggle a:hover {
+  color: blue;
+}
+
+.TemperatureToggle a:visited {
+  text-decoration: underline;
+}

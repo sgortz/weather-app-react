@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import TemperatureToggle from "./TemperatureToggle";
 import WeatherIcon from "./WeatherIcon";
 
 function Header(props) {
@@ -11,15 +12,10 @@ function Header(props) {
       <h2>
         <FormattedDate date={props.data.date} />
       </h2>
-      <p className="TempInfo">
+      <div className="TempInfo">
         <WeatherIcon code={props.data.icon} alt={props.data.description} />
-        <span className="Temperature">
-          {Math.round(props.data.temperature)}
-        </span>
-        <span className="TempUnits">
-          <a href="/">˚C</a> |<a href="/">˚F</a>
-        </span>
-      </p>
+        <TemperatureToggle celsius={props.data.temperature} />
+      </div>
     </header>
   );
 }
