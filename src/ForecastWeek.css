@@ -1,0 +1,22 @@
+.ForecastWeek {
+  font-weight: 200;
+}
+
+.ForecastWeek ul {
+  list-style: none;
+}
+
+.ForecastWeek li {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.ForecastWeek img {
+  display: inline-block;
+  width: 60px;
+}
+
+.ForecastWeek canvas {
+  padding: 10px;
+}

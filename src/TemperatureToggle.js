@@ -19,7 +19,7 @@ function TemperatureToggle(props) {
       <span className="TemperatureToggle">
         <span className="Temperature">{Math.round(props.celsius)}</span>
         <span className="TempUnits">
-          ˚C|
+          ˚C |
           <a href="/" onClick={showFahrenheit}>
             ˚F
           </a>

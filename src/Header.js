@@ -13,7 +13,11 @@ function Header(props) {
         <FormattedDate date={props.data.date} />
       </h2>
       <div className="TempInfo">
-        <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        <WeatherIcon
+          code={props.data.icon}
+          alt={props.data.description}
+          size={80}
+        />
         <TemperatureToggle celsius={props.data.temperature} />
       </div>
     </header>

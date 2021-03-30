@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from "./Header";
 import Subheading from "./Subheading";
+import ForecastWeek from "./ForecastWeek";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -11,12 +12,10 @@ export default function Weather(props) {
   function search() {
     const apiKey = "730b5a562dc454244ed8e3e1a4518a7d";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-    console.log(apiUrl);
 
     axios.get(apiUrl).then(handleResponse);
   }
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -62,58 +61,7 @@ export default function Weather(props) {
         </form>
         <Header data={weatherData} />
         <Subheading data={weatherData} />
-        <section>
-          <ul className="ForecastWeek">
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/13d@2x.png"
-                alt="weather icon"
-              />
-              <div>Tuesday</div>
-              <div>99˚ | -99˚</div>
-            </li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/04d@2x.png"
-                alt="weather icon"
-              />
-              <div>Wednesday</div>
-              <div>-99˚ | -99˚</div>
-            </li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/03d@2x.png"
-                alt="weather icon"
-              />
-              <div>Thursday</div>
-              <div>-99˚ | -99˚</div>
-            </li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/13d@2x.png"
-                alt="weather icon"
-              />
-              <div>Friday</div>
-              <div>99˚ | -99˚</div>
-            </li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/13d@2x.png"
-                alt="weather icon"
-              />
-              <div>Saturday</div>
-              <div>-99˚ | -99˚</div>
-            </li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/13d@2x.png"
-                alt="weather icon"
-              />
-              <div>Sunday</div>
-              <div>-99˚ | -99˚</div>
-            </li>
-          </ul>
-        </section>
+        <ForecastWeek city={weatherData.city} />
       </div>
     );
   } else {
