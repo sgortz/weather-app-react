@@ -54,11 +54,6 @@ export default function Weather(props) {
             />
           </label>
           <input type="submit" value="Submit" className="SearchButton" />
-          <input
-            type="submit"
-            value="Current City"
-            className="CurrentCityButton"
-          />
         </form>
         <Header data={weatherData} />
         <Subheading data={weatherData} />
