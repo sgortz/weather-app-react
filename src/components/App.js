@@ -1,9 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Weather from "./Weather.js";
-import Footer from "./Footer";
 import Card from "react-bootstrap/Card";
 import "./App.css";
+import Weather from "./Weather.js";
+import Footer from "./Footer.js";
+
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
       <Card className="Wrapper">
         <Card.Body>
           <div className="container">
-            <Weather defaultCity="Bemidji" />
+            <Weather defaultCity="New York City" />
           </div>
         </Card.Body>
       </Card>

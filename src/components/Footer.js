@@ -8,7 +8,7 @@ function Footer() {
       <a
         href="https://github.com/sgortz/weather-app-react-v2"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         Open-source code
       </a>{" "}
