@@ -6,7 +6,7 @@ function Footer() {
     <footer className="Footer">
       <i className="fab fa-github"></i>{" "}
       <a
-        href="https://github.com/sgortz/weather-app-react-v2"
+        href="https://github.com/sgortz/weather-app-react"
         target="_blank"
         rel="noopener noreferrer"
       >
