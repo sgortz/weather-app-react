@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <img src="src/assets/app-screenshot.png" width="600" />
+<!--   <p style="font-size:66px"><strong>Weather App</strong><p> -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p>
+    <a href="https://sgortz-weather-react.netlify.app/">View Demo</a>
+    ·
+    <a href="https://github.com/sgortz/weather-app-react/issues">Report Bug</a>
+  </p>
+</div>
 
-## Available Scripts
 
-In the project directory, you can run:
+## About this project
 
-### `npm start`
+Simple weather app that shows temperatures either in Celsius or Fahrenheit as well as humidity levels, wind speed, and a forecast for the next 7 days. This project was created with the intent to learn more about React and dynamic rendering.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+## Key Features
+
+- 7-day forecast with animated icons
+- Celsius & Fahrenheit temperature toggle
+- Real-time temperature and forecast
+<!-- - Remember your search history (click the word to research it, or in the x to remove it) -->
+
+
+## Getting started
+
+To download a copy of this project to your local machine: 
+
+```sh
+$ git clone https://github.com/sgortz/weather-app-react.git
+```
+
+Install dependencies and run the server
+
+```sh
+$ npm install
+$ npm start
+```
+
+The page will reload automatically if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- CONTACT -->
+## Contact
 
-### `npm run build`
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ACKNOWLEDGMENTS -->
+## Tech Stack
+[![React][react-shield]][react-url]
+[![Bootstrap][bootstrap-shield]][bootstrap-url]
+[![fontawesome][fontawesome-shield]][fontawesome-url]
+[![Netlify][netlify-shield]][netlify-url]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Open Weather API](https://openweathermap.org/api)
+* [Google Fonts](https://fonts.google.com/)
 
-### `npm run eject`
+## Other Applications
+* [Weather App]() (Vanilla JS)
+* [Dictionary App]() (React)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/sabrinagortz
+[react-shield]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
+[react-url]:https://create-react-app.dev/
+[bootstrap-shield]: https://img.shields.io/badge/-Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=for-the-badge
+[bootstrap-url]: https://www.webpagefx.com/tools/emoji-cheat-sheet
+[fontawesome-shield]: https://img.shields.io/badge/-Font%20Awesome-528DD7?logo=font-awesome&logoColor=white&style=for-the-badge
+[fontawesome-url]: https://fontawesome.com/
+[netlify-shield]: https://img.shields.io/badge/-Netlify-00C7B7?logo=netlify&logoColor=white&style=for-the-badge
+[netlify-url]: https://www.netlify.com/
