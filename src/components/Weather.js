@@ -4,14 +4,14 @@ import "./Weather.css";
 import Header from "./Header.js";
 import Subheading from "./Subheading.js";
 import ForecastWeek from "./ForecastWeek.js";
+import WEATHER_API_KEY from "../env/api_key.js";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function search() {
-    const apiKey = "730b5a562dc454244ed8e3e1a4518a7d";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${WEATHER_API_KEY}`;
 
     axios.get(apiUrl)
       .then(handleResponse);
